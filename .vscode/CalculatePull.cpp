@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 double calculatePull(int t)
@@ -12,5 +13,5 @@ int main()
     cout << "Enter time: ";
     cin >> t;
     cout << "Hight is: " << calculatePull(t);
-    return 0;
+    getch();
 }

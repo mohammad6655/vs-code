@@ -8,6 +8,7 @@ int main()
 {
     char str[80];
     double num;
+    system("cls");
     getstr(str);
     str_to_float(str, num);
     print(num);

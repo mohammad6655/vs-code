@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 double pow(float *, int *);
-void print(int *);
+
 
 int main()
 {

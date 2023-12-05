@@ -1,6 +1,6 @@
 // AVL(INSERT)
 #include <iostream>
-#include <strlib.h>
+#include <stdlib.h>
 #include <conio.h>
 
 struct node
@@ -60,6 +60,60 @@ struct node *leftRotate(struct node *x)
     y->height = 1 + max(height(y->left), height(y->right));
 
     return y;
+}
+int Balance(struct node *p)
+{
+    if (p == NULL)
+        return 0;
+    return height(p->left) - height(p->right);
+}
+struct node *add(struct node *p, int key)
+{
+    if (p == NULL)
+        return (create(key));
+
+    if (key < p->data)
+        p->left = add(p->left, key);
+    else if (key > p->data)
+        p->right = add(p->right, key);
+    else // Equal datas are not allowed in BST
+        return p;
+
+    p->height = 1 + max(height(p->left), height(p->right));
+
+    int b = Balance(p);
+
+    // Left Left Case
+    if (b >= 2 && key < p->left->data)
+        return rightRotate(p);
+
+    // Right Right Case
+    if (b <= -2 && key > p->right->data)
+        return leftRotate(p);
+
+    // Left Right Case
+    if (b >= 2 && key > p->left->data)
+    {
+        p->left = leftRotate(p->left);
+        return rightRotate(p);
+    }
+
+    // Right Left Case
+    if (b <= -2 && key < p->right->data)
+    {
+        p->right = rightRotate(p->right);
+        return leftRotate(p);
+    }
+    return p;
+}
+void preorder(struct node *r)
+{
+    if (r != NULL)
+    {
+        std::cout << r->data << "   ";
+        preorder(r->left);
+        preorder(r->right);
+    }
 }
 int main()
 {

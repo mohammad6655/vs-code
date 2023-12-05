@@ -30,7 +30,7 @@ int main()
     std::cout << "Enter a string: ";
     std::cin.get(s, 255);
     int l = len(s);
-    while (i < 1)
+    while (i < l)
     {
         wordLen = nextWord(s, i);
         if (wordLen == 4)

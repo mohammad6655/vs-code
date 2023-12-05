@@ -6,6 +6,7 @@ void convert(char s[]);
 int main()
 {
     char str[80];
+    system("cls");
     std::cout << "Enter a string: ";
     std::cin.get(str, 80);
     std::cin.get();

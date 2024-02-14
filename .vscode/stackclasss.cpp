@@ -20,5 +20,5 @@ int main()
     s.push(6);
     s.printStack();
 
-    getch();
+    return 0;
 }

@@ -2,6 +2,8 @@
 #include <conio.h>
 #include <iomanip>
 
+template<class QT>
+
 class Queue
 {
 private:

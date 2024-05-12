@@ -150,6 +150,14 @@ void mulArr(int arr1[][m], int arr2[][m], int arr3[][m], int n, int m)
             arr3[i][j] = s;
         }
 }
+void scalarMulArr(int arr1[][m], int arr2[][m], int n, int m, int value)
+{
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+        {
+            arr2[i][j] = arr1[i][j] * value;
+        }
+}
 void scalarCalArr(int arr1[][m], int arr2[][m], int n, int m, int value)
 {
     for (int i = 0; i < n; i++)

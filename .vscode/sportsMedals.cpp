@@ -28,7 +28,7 @@ int main()
             n5 = i + 1385;
         }
     }
-    std::cout << "----------answer (1) ------" << '\n';
+    std::cout << "------------answer (1) ------" << '\n';
     std::cout << n1 << '\n';
     std::cout << "------------answer (2) ------" << '\n';
     std::cout << n2 << '\n';
@@ -36,13 +36,13 @@ int main()
     for (i = 0; i < 11; i++)
         if (x[i][0] + x[i][1] + x[i][2] == 0)
             std::cout << (1385 + i) << '\n';
-    std::cout << "-------------asnwer (4) ------" << '\n';
+    std::cout << "------------asnwer (4) ------" << '\n';
     std::cout << n4 << '\n';
-    std::cout << "---------------answer (5) ------" << '\n';
+    std::cout << "------------answer (5) ------" << '\n';
     std::cout << n5 << '\n';
-    std::cout << "---------------answer (6) ------" << '\n';
+    std::cout << "------------answer (6) ------" << '\n';
     for (i = 0; i < 11; i++)
         std::cout << "sal " << (1385 + i) << ": poan= " << (x[i][0] * 3 + x[i][1] * 2 + x[i][2]) << '\n';
-    std::cout << "--------------answer (7) ------" << '\n';
+    std::cout << "------------answer (7) ------" << '\n';
     std::cout << n7 << '\n';
 }
